@@ -8,6 +8,5 @@ public class RpcFrameworkSimpleMain {
         HelloService helloService = rpcClientProxy.getProxy(HelloService.class);
         String Hello = helloService.Hello(new Hello("111","222"));
         System.out.println(Hello);
-        
     }
 }
