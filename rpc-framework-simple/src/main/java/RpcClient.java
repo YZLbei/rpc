@@ -20,6 +20,7 @@ public class RpcClient {
      */
     public Object sendRpcRequest(RPCRequest rpcRequest,String host,int port){
         try (Socket socket = new Socket(host, port)) {
+            //todo ÎªÊ²Ã´ÊÇsocket
             ObjectOutputStream objectOutputStream =new ObjectOutputStream(socket.getOutputStream());
             objectOutputStream.writeObject(rpcRequest);
             ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());

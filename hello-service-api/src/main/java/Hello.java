@@ -1,11 +1,9 @@
-
 import lombok.*;
-
-
 import java.io.Serializable;
 
 /**
- * 序列化
+ * todo：为什么序列化
+ * 实体类，客户端可见
  */
 @Getter
 @Setter
@@ -17,3 +15,4 @@ public class Hello implements Serializable {
     private String message;
     private String description;
 }
+

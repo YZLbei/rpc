@@ -15,7 +15,7 @@ public class RpcClientProxy implements InvocationHandler {
 
 
     /**
-     * @param proxy 代理的对象，就是rpcClient
+     * todo @param proxy 代理的对象，就是rpcClient?
      * @param method 客户端要调用的方法
      * @param args 客户端调用方法的参数
      * @return 返回的是代理类发出的请求
