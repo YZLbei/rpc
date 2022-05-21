@@ -2,7 +2,7 @@ import lombok.*;
 import java.io.Serializable;
 
 /**
- * todo：为什么序列化
+ * 为什么序列化？因为是实体对象
  * 实体类，客户端可见
  */
 @Getter

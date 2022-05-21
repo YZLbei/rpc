@@ -1,5 +1,7 @@
-import dto.RPCRequest;
+import dto.RpcRequest;
 import lombok.AllArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -10,20 +12,21 @@ import java.lang.reflect.Proxy;
  */
 @AllArgsConstructor
 public class RpcClientProxy implements InvocationHandler {
+    private final static Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);
     private String host;
     private int port;
 
 
     /**
-     * todo @param proxy 代理的对象，就是rpcClient?
+     *  @param proxy 代理的对象，就是rpcClient?  不是的，代理的对象是接口是HelloService
      * @param method 客户端要调用的方法
      * @param args 客户端调用方法的参数
      * @return 返回的是代理类发出的请求
-     * todo 代理类是怎么调用的
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        RPCRequest rpcRequest = RPCRequest.builder()
+        logger.info("Call invoke method and invoked method:{}",method.getName());
+        RpcRequest rpcRequest = RpcRequest.builder()
                 .methodName(method.getName())
                 .parameters(args)
                 .interfaceName(method.getDeclaringClass().getName())
@@ -43,7 +46,7 @@ public class RpcClientProxy implements InvocationHandler {
      * getProxy生成的不是RpcClient对象,而应该是代理RpcClient的RpcClientProxy对象
      */
     public<T>T getProxy(Class<T> clazz){
-        return (T) Proxy.newProxyInstance(clazz.getClassLoader(),new Class<?>[]{clazz}, RpcClientProxy.this);
+        return (T) Proxy.newProxyInstance(clazz.getClassLoader(),new Class<?>[]{clazz}, this);
     }
     
     
