@@ -1,3 +1,5 @@
+package remoting.socket;
+
 import dto.RpcRequest;
 import dto.RpcResponse;
 import enumeration.RpcErrorMessageEnum;
@@ -44,14 +46,12 @@ public class RpcClient {
             return rpcResponse.getData();
             
             
-            
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new RpcException("调用服务失败:", e);
         }
         /**
          * 如果没有建立socket成功就返回null，服务器接收null就不会显示客户端连接
          */
-        return null;
     }
     
 }

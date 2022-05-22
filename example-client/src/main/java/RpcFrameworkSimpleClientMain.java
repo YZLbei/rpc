@@ -1,4 +1,6 @@
-public class RpcFrameworkSimpleMain {
+import remoting.socket.RpcClientProxy;
+
+public class RpcFrameworkSimpleClientMain {
     public static void main(String[] args) {
         //rpcClientProxy是代理客户端发出请求，绑定地址和端口号
         RpcClientProxy rpcClientProxy  = new RpcClientProxy("127.0.0.1",9999);

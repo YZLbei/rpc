@@ -1,3 +1,5 @@
+package remoting.socket;
+
 import dto.RpcRequest;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
