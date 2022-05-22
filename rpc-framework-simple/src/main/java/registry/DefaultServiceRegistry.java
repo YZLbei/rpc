@@ -16,7 +16,7 @@ public class DefaultServiceRegistry implements ServiceRegistry{
 
     /**
      * 接口和服务的对应关系，todo 处理一个接口被两个实现类实现的情况
-     * key:service/interface name ,是service每一个实现的接口都注册进来
+     * key:interface name ,是service每一个实现的接口都注册进来
      * value:service
      * @param service
      * @param <T>
@@ -52,6 +52,7 @@ public class DefaultServiceRegistry implements ServiceRegistry{
             serviceMap.put(i.getCanonicalName(), service);
         }
         logger.info("Add Service:{} and interfaces:{}",serviceName,service.getClass().getInterfaces());
+        //logger.info("Map:{}",serviceMap.keySet());
     }
 
     @Override

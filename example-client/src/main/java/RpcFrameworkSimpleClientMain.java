@@ -10,6 +10,11 @@ public class RpcFrameworkSimpleClientMain {
          */
         HelloService helloService = rpcClientProxy.getProxy(HelloService.class);
         String Hello = helloService.Hello(new Hello("111","222"));
+
+        Service service = rpcClientProxy.getProxy(Service.class);
+        String Hello2 = service.Hello(new Hello("111","222"));
         System.out.println(Hello);
+        
+        
     }
 }
