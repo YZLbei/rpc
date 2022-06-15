@@ -1,4 +1,4 @@
-import remoting.socket.RpcClientProxy;
+import transport.socket.RpcClientProxy;
 
 public class RpcFrameworkSimpleClientMain {
     public static void main(String[] args) {

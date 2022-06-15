@@ -1,4 +1,4 @@
-package remoting;
+package transport;
 
 import dto.RpcRequest;
 import dto.RpcResponse;

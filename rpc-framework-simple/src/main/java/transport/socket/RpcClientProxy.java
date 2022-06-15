@@ -1,4 +1,4 @@
-package remoting.socket;
+package transport.socket;
 
 import dto.RpcRequest;
 import lombok.AllArgsConstructor;

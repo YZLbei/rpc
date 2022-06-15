@@ -1,16 +1,15 @@
-package remoting.socket;
+package transport.socket;
 
 import dto.RpcRequest;
 import dto.RpcResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import registry.ServiceRegistry;
-import remoting.RpcRequestHandler;
+import transport.RpcRequestHandler;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.lang.reflect.InvocationTargetException;
 import java.net.Socket;
 
 public class RpcRequestHandlerRunnable implements Runnable {
