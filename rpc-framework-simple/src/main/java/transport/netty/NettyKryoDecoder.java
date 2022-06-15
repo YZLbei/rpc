@@ -4,6 +4,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageCodec;
 import io.netty.handler.codec.ByteToMessageDecoder;
+import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import serialize.Serializer;
@@ -15,6 +16,7 @@ import java.util.List;
  * @Date: 2022/6/15 18:22
  * @Description: kryo½âÂëÆ÷
  */
+@AllArgsConstructor
 public class NettyKryoDecoder extends ByteToMessageDecoder {
     private final static Logger logger = LoggerFactory.getLogger(NettyKryoDecoder.class);
     private Serializer serializer;

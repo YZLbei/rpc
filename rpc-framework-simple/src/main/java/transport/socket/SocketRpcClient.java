@@ -13,17 +13,16 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class RpcClient {
-    public static final Logger logger = LoggerFactory.getLogger(RpcClient.class);
-
+public class SocketRpcClient {
+    public static final Logger logger = LoggerFactory.getLogger(SocketRpcClient.class);
+    private String host;
+    private int port;
     /**
      * 客户端发送请求给服务器
      * @param rpcRequest 发送的请求
-     * @param host 主机
-     * @param port 端口号
      * @return 返回的是对象，因为发送的是对象
      */
-    public Object sendRpcRequest(RpcRequest rpcRequest, String host, int port){
+    public Object sendRpcRequest(RpcRequest rpcRequest){
         try (Socket socket = new Socket(host, port)) {
             //为什么是socket
             ObjectOutputStream objectOutputStream =new ObjectOutputStream(socket.getOutputStream());

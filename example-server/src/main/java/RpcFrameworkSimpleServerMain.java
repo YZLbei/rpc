@@ -1,5 +1,5 @@
 import registry.DefaultServiceRegistry;
-import transport.socket.RpcServer;
+import transport.socket.SocketRpcServer;
 
 public class RpcFrameworkSimpleServerMain {
     public static void main(String[] args) {
@@ -10,7 +10,7 @@ public class RpcFrameworkSimpleServerMain {
         DefaultServiceRegistry defaultServiceRegistry = new DefaultServiceRegistry();
         defaultServiceRegistry.registry(helloService);
         defaultServiceRegistry.registry(helloService2);
-        RpcServer rpcServer = new RpcServer(defaultServiceRegistry);
+        SocketRpcServer rpcServer = new SocketRpcServer(defaultServiceRegistry);
         rpcServer.start(9999);
     
         

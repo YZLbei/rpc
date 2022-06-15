@@ -12,14 +12,14 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
-public class RpcRequestHandlerRunnable implements Runnable {
-    private static final Logger logger = LoggerFactory.getLogger(RpcRequestHandlerRunnable.class);
+public class SocketRpcRequestHandlerRunnable implements Runnable {
+    private static final Logger logger = LoggerFactory.getLogger(SocketRpcRequestHandlerRunnable.class);
     private Socket socket;
     private RpcRequestHandler rpcRequestHandler;
     private ServiceRegistry serviceRegistry;
 
 
-    public RpcRequestHandlerRunnable(Socket socket, RpcRequestHandler rpcRequestHandler, ServiceRegistry serviceRegistry) {
+    public SocketRpcRequestHandlerRunnable(Socket socket, RpcRequestHandler rpcRequestHandler, ServiceRegistry serviceRegistry) {
         this.socket = socket;
         this.rpcRequestHandler = rpcRequestHandler;
         this.serviceRegistry = serviceRegistry;
