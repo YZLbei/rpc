@@ -16,10 +16,12 @@ public final class SingletonFactory {
     private SingletonFactory() {
     }
 
+    // TODO: 2022/8/11 传入的是什么 
     public static <T> T getInstance(Class<T> c) {
         if (c == null) {
             throw new IllegalArgumentException();
         }
+        // TODO: 2022/8/11 具体值是什么 
         String key = c.toString();
         if (OBJECT_MAP.containsKey(key)) {
             return c.cast(OBJECT_MAP.get(key));
