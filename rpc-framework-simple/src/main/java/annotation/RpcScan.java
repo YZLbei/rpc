@@ -1,12 +1,12 @@
 package annotation;
 
-import github.javaguide.spring.CustomScannerRegistrar;
+import spring.CustomScannerRegistrar;
 import org.springframework.context.annotation.Import;
 
 import java.lang.annotation.*;
 
 /**
- * scan custom annotations
+ * 扫描自定义注释
  *
  * @author shuang.kou
  * @createTime 2020年08月10日 21:42:00

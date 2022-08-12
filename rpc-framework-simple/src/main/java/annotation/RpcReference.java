@@ -4,7 +4,7 @@ package annotation;
 import java.lang.annotation.*;
 
 /**
- * RPC reference annotation, autowire the service implementation class
+ * RPC 引用注解，自动装配服务实现类
  *
  * @author smile2coder
  * @createTime 2020年09月16日 21:42:00

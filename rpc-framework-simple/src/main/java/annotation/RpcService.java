@@ -5,6 +5,7 @@ import java.lang.annotation.*;
 
 /**
  * RPC service annotation, marked on the service implementation class
+ * RPC服务注解，标注在服务实现类上
  *
  * @author shuang.kou
  * @createTime 2020年07月21日 13:11:00
