@@ -1,6 +1,6 @@
 package compress;
 
-import github.javaguide.extension.SPI;
+import extension.SPI;
 
 /**
  * @author wangtao .
