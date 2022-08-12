@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import registry.ServiceRegistry;
-import transport.RpcRequestHandler;
+import remoting.handler.RpcRequestHandler;
 
 public class SocketRpcServer {
     private static final int CORE_POOL_SIZE = 10;

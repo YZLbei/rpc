@@ -5,7 +5,7 @@ import dto.RpcResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import registry.ServiceRegistry;
-import transport.RpcRequestHandler;
+import remoting.handler.RpcRequestHandler;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
