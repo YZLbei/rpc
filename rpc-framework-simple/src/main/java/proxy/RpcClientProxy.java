@@ -1,16 +1,18 @@
 package proxy;
 
-import github.javaguide.config.RpcServiceConfig;
-import github.javaguide.enums.RpcErrorMessageEnum;
-import github.javaguide.enums.RpcResponseCodeEnum;
-import github.javaguide.exception.RpcException;
-import github.javaguide.remoting.dto.RpcRequest;
-import github.javaguide.remoting.dto.RpcResponse;
-import github.javaguide.remoting.transport.RpcRequestTransport;
-import github.javaguide.remoting.transport.netty.client.NettyRpcClient;
-import github.javaguide.remoting.transport.socket.SocketRpcClient;
+import config.RpcServiceConfig;
+import dto.RpcRequest;
+import dto.RpcResponse;
+import enums.RpcErrorMessageEnum;
+import enums.RpcResponseCodeEnum;
+import exception.RpcException;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import transport.RpcClient;
+import transport.netty.NettyRpcClient;
+import transport.socket.SocketRpcClient;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -19,46 +21,57 @@ import java.util.UUID;
 import java.util.concurrent.CompletableFuture;
 
 /**
- * Dynamic proxy class.
- * When a dynamic proxy object calls a method, it actually calls the following invoke method.
- * It is precisely because of the dynamic proxy that the remote method called by the client is like calling the local method (the intermediate process is shielded)
- *
- * @author shuang.kou
- * @createTime 2020å¹´05æœˆ10æ—¥ 19:01:00
+ * jdk¶¯Ì¬´úÀí
+ * ¶¯Ì¬´úÀíÀà
+ * µ±Ò»¸ö¶¯Ì¬´úÀí¶ÔÏóµ÷ÓÃÒ»¸ö·½·¨Ê±£¬ËüÊµ¼ÊÉÏµ÷ÓÃÁËÏÂÃæµÄinvoke·½·¨
+ * ÕıÊÇÒòÎª¶¯Ì¬´úÀí£¬¿Í»§¶Ëµ÷ÓÃÔ¶³Ì·½·¨¾ÍÏñµ÷ÓÃ±¾µØ·½·¨Ò»Ñù£¨ÖĞ¼ä¹ı³Ì±»ÆÁ±Î£©
  */
 @Slf4j
 public class RpcClientProxy implements InvocationHandler {
-
+    //private final static Logger logger = LoggerFactory.getLogger(RpcClientProxy.class);
+    // TODO: 2022/8/12 ¸ÉÂïÓÃµÄ 
     private static final String INTERFACE_NAME = "interfaceName";
-
     /**
-     * Used to send requests to the server.And there are two implementations: socket and netty
+     * ÓÃÓÚÏò·şÎñÆ÷·¢ËÍÇëÇó¡£²¢ÇÒÓĞÁ½ÖÖÊµÏÖ·½Ê½£ºsocketºÍnetty
      */
     private final RpcRequestTransport rpcRequestTransport;
     private final RpcServiceConfig rpcServiceConfig;
-
+//    private RpcClient rpcClient;
+//    public RpcClientProxy(RpcClient rpcClient) {
+//        this.rpcClient = rpcClient;
+//    }
     public RpcClientProxy(RpcRequestTransport rpcRequestTransport, RpcServiceConfig rpcServiceConfig) {
         this.rpcRequestTransport = rpcRequestTransport;
         this.rpcServiceConfig = rpcServiceConfig;
     }
-
-
     public RpcClientProxy(RpcRequestTransport rpcRequestTransport) {
         this.rpcRequestTransport = rpcRequestTransport;
         this.rpcServiceConfig = new RpcServiceConfig();
     }
-
     /**
-     * get the proxy object
+     *  @param proxy ´úÀíµÄ¶ÔÏó£¬¾ÍÊÇrpcClient?  ²»ÊÇµÄ£¬´úÀíµÄ¶ÔÏóÊÇ½Ó¿ÚÊÇHelloService
+     * @param method ¿Í»§¶ËÒªµ÷ÓÃµÄ·½·¨
+     * @param args ¿Í»§¶Ëµ÷ÓÃ·½·¨µÄ²ÎÊı
+     * @return ·µ»ØµÄÊÇ´úÀíÀà·¢³öµÄÇëÇó
      */
-    @SuppressWarnings("unchecked")
-    public <T> T getProxy(Class<T> clazz) {
-        return (T) Proxy.newProxyInstance(clazz.getClassLoader(), new Class<?>[]{clazz}, this);
-    }
-
+//    @Override
+//    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+//        logger.info("Call invoke method and invoked method:{}",method.getName());
+//        RpcRequest rpcRequest = RpcRequest.builder()
+//                .methodName(method.getName())
+//                .parameters(args)
+//                .interfaceName(method.getDeclaringClass().getName())
+//                .paramTypes(method.getParameterTypes())
+//                .build();
+//        //return rpcRequest;
+//        //»ñÈ¡´úÀíÀàµÄ£¬Ò²¾ÍÊÇ¿Í»§¶ËµÄËÄ¸ö²ÎÊı
+//        //SocketRpcClient rpcClient = new SocketRpcClient();
+//        //Í¨¹ı´úÀíÀà·¢ËÍÇëÇó
+//        return rpcClient.sendRpcRequest(rpcRequest);
+//    }
     /**
-     * This method is actually called when you use a proxy object to call a method.
-     * The proxy object is the object you get through the getProxy method.
+     * µ±ÄúÊ¹ÓÃ´úÀí¶ÔÏóµ÷ÓÃ·½·¨Ê±£¬Êµ¼ÊÉÏ»áµ÷ÓÃ´Ë·½·¨¡£
+     * ´úÀí¶ÔÏó¾ÍÊÇÄãÍ¨¹ıgetProxy·½·¨µÃµ½µÄ¶ÔÏó¡£
      */
     @SneakyThrows
     @SuppressWarnings("unchecked")
@@ -83,6 +96,16 @@ public class RpcClientProxy implements InvocationHandler {
         }
         this.check(rpcResponse, rpcRequest);
         return rpcResponse.getData();
+    }
+
+    /**
+     * getProxy
+     * Éú³É´úÀí¶ÔÏó
+     * 
+     * getProxyÉú³ÉµÄ²»ÊÇRpcClient¶ÔÏó,¶øÓ¦¸ÃÊÇ´úÀíRpcClientµÄRpcClientProxy¶ÔÏó
+     */
+    public<T>T getProxy(Class<T> clazz){
+        return (T) Proxy.newProxyInstance(clazz.getClassLoader(),new Class<?>[]{clazz}, this);
     }
 
     private void check(RpcResponse<Object> rpcResponse, RpcRequest rpcRequest) {

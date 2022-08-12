@@ -1,4 +1,4 @@
-import transport.RpcClientProxy;
+import proxy.RpcClientProxy;
 
 public class RpcFrameworkSimpleClientMain {
     public static void main(String[] args) {
