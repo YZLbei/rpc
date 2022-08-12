@@ -33,6 +33,7 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/provider/impl/ZkServiceProviderImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/proxy/RpcClientProxy.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/ServiceDiscovery.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/ZkServiceRegistryImplTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/zk/ZkServiceDiscoveryImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/zk/ZkServiceRegistryImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/zk/util/CuratorUtils.java" charset="UTF-8" />
@@ -53,6 +54,21 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/CustomScanner.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/CustomScannerRegistrar.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/SpringBeanPostProcessor.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/resources/META-INF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/DemoRpcService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/DemoRpcServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/gzip/GzipCompressTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/DemoRpcService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/DemoRpcServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/compress/gzip/GzipCompressTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/loadbalance/loadbalancer/ConsistentHashLoadBalanceTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/registry/ZkServiceRegistryImplTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/serialize/hessian/HessianSerializerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/javaguide/serialize/kyro/KryoSerializerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/loadbalancer/ConsistentHashLoadBalanceTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/registry/ZkServiceRegistryImplTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/serialize/hessian/HessianSerializerTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/test/java/serialize/kyro/KryoSerializerTest.java" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
