@@ -29,6 +29,7 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/provider/ServiceProvider.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/provider/impl/ZkServiceProviderImpl.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/proxy/RpcClientProxy.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/ServiceDiscovery.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
