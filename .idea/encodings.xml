@@ -47,6 +47,9 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/hessian/HessianSerializer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/protostuff/ProtostuffSerializer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/CustomScanner.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/CustomScannerRegistrar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/spring/SpringBeanPostProcessor.java" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>
