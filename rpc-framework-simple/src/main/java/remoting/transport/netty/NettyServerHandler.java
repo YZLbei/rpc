@@ -1,4 +1,4 @@
-package transport.netty;
+package remoting.transport.netty;
 
 import dto.RpcRequest;
 import dto.RpcResponse;

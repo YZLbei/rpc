@@ -1,8 +1,7 @@
-package transport.netty;
+package remoting.transport.netty;
 
 import dto.RpcRequest;
 import dto.RpcResponse;
-import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -13,8 +12,6 @@ import io.netty.handler.logging.LoggingHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import serialize.kryo.KryoSerializer;
-
-import java.net.ServerSocket;
 
 /**
  * @Auther: YuZhenLong

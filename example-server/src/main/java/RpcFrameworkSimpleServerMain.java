@@ -1,5 +1,5 @@
 import registry.DefaultServiceRegistry;
-import transport.socket.SocketRpcServer;
+import remoting.transport.socket.SocketRpcServer;
 
 public class RpcFrameworkSimpleServerMain {
     public static void main(String[] args) {

@@ -35,6 +35,7 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/registry/zk/util/CuratorUtils.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/constants/RpcConstants.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/dto/RpcMessage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/RpcRequestTransport.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>

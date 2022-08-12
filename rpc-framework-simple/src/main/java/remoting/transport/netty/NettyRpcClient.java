@@ -1,4 +1,4 @@
-package transport.netty;
+package remoting.transport.netty;
 
 import dto.RpcRequest;
 import dto.RpcResponse;
@@ -9,11 +9,9 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 import io.netty.util.AttributeKey;
-import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import serialize.kryo.KryoSerializer;
-import transport.RpcClient;
 
 /**
  * @Auther: YuZhenLong

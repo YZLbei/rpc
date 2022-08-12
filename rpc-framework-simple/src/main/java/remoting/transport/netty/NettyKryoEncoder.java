@@ -1,4 +1,4 @@
-package transport.netty;
+package remoting.transport.netty;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
