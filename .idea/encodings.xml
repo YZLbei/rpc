@@ -20,6 +20,12 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-core/src/target" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/compress/Compress.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/compress/gzip/GzipCompress.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/config/CustomShutdownHook.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/config/RpcServiceConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/loadbalance/AbstractLoadBalance.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/loadbalance/LoadBalance.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/loadbalance/loadbalancer/ConsistentHashLoadBalance.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/loadbalance/loadbalancer/RandomLoadBalance.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
