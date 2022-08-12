@@ -36,6 +36,14 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/constants/RpcConstants.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/dto/RpcMessage.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/RpcRequestTransport.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/client/ChannelProvider.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/client/NettyRpcClient.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/client/NettyRpcClientHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/client/UnprocessedRequests.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/codec/RpcMessageDecoder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/codec/RpcMessageEncoder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/server/NettyRpcServer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/server/NettyRpcServerHandler.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
