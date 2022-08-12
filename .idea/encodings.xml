@@ -7,15 +7,18 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/enums/RpcErrorMessageEnum.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/enums/RpcResponseCodeEnum.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/enums/SerializationTypeEnum.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/extension/ExtensionLoader.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/extension/Holder.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/extension/SPI.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/factory/SingletonFactory.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/CollectionUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/PropertiesFileUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/RuntimeUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/StringUtil.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/concurrent/threadpool/CustomThreadPoolConfig.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/concurrent/threadpool/CustomThreadPoolConfig.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/concurrent/threadpool/ThreadPoolFactoryUtil.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/rpc-framework-common/src/main/java/utils/concurrent/threadpool/ThreadPoolFactoryUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-core/src/target" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/compress/Compress.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
     <file url="PROJECT" charset="GBK" />
   </component>
