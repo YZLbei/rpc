@@ -45,6 +45,8 @@
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/server/NettyRpcServer.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/remoting/transport/netty/server/NettyRpcServerHandler.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/Serializer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/hessian/HessianSerializer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rpc-framework-simple/src/main/java/serialize/protostuff/ProtostuffSerializer.java" charset="UTF-8" />
     <file url="PROJECT" charset="GBK" />
   </component>
 </project>

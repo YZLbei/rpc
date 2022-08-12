@@ -3,22 +3,26 @@ package serialize.kryo;
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
-import dto.RpcRequest;
-import dto.RpcResponse;
+
 import exception.SerializeException;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import remoting.dto.RpcRequest;
+import remoting.dto.RpcResponse;
 import serialize.Serializer;
 
 import java.io.*;
 
 /**
+ * Kryo序列化类，Kryo序列化效率很高，但只兼容Java语言
  * @Auther: YuZhenLong
  * @Date: 2022/6/15 17:01
  * @Description:kryo序列化方法
  */
+@Slf4j
 public class KryoSerializer implements Serializer {
-    private static final Logger logger = LoggerFactory.getLogger(KryoSerializer.class);
+    //private static final Logger logger = LoggerFactory.getLogger(KryoSerializer.class);
 
     /**
      * 由于kryo不是线程安全的，每个线程都应该有自己的Kryo，Input和OutPut
@@ -31,10 +35,11 @@ public class KryoSerializer implements Serializer {
         Kryo kryo = new Kryo();
         kryo.register(RpcResponse.class);
         kryo.register(RpcRequest.class);
-        //默认值为true,是否关闭注册行为,关闭之后可能存在序列化问题，一般推荐设置为 true
-        kryo.setReferences(true);
-        //默认值为false,是否关闭循环引用，可以提高性能，但是一般不推荐设置为 true
-        kryo.setRegistrationRequired(false);
+        // TODO: 2022/8/12 为什么取消了 
+//        //默认值为true,是否关闭注册行为,关闭之后可能存在序列化问题，一般推荐设置为 true
+//        kryo.setReferences(true);
+//        //默认值为false,是否关闭循环引用，可以提高性能，但是一般不推荐设置为 true
+//        kryo.setRegistrationRequired(false);
         return kryo;
     });
     
