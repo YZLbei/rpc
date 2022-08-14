@@ -18,6 +18,7 @@ public class ZkServiceRegistryImpl implements ServiceRegistry {
 
     @Override
     public void registerService(String rpcServiceName, InetSocketAddress inetSocketAddress) {
+        // TODO: 2022/8/14 RpcServiceName结尾有/吗
         String servicePath = CuratorUtils.ZK_REGISTER_ROOT_PATH + "/" + rpcServiceName + inetSocketAddress.toString();
         CuratorFramework zkClient = CuratorUtils.getZkClient();
         CuratorUtils.createPersistentNode(zkClient, servicePath);
