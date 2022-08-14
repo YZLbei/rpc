@@ -1,9 +1,10 @@
 package exception;
 
-import enumeration.RpcErrorMessageEnum;
+
+import enums.RpcErrorMessageEnum;
 
 public class RpcException extends RuntimeException{
-    public RpcException(RpcErrorMessageEnum rpcErrorMessageEnum,String detail){
+    public RpcException(RpcErrorMessageEnum rpcErrorMessageEnum, String detail){
         super(rpcErrorMessageEnum.getMessage()+":"+detail);
     }
     

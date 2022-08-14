@@ -1,6 +1,5 @@
 package registry;
 
-import dto.RpcRequest;
 import extension.SPI;
 import remoting.dto.RpcRequest;
 
