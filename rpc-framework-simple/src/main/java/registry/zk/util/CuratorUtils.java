@@ -41,8 +41,7 @@ public final class CuratorUtils {
     }
 
     /**
-     * Create persistent nodes. Unlike temporary nodes, persistent nodes are not removed when the client disconnects
-     *
+     * 创建持久节点。与临时节点不同，持久节点在客户端断开连接时不会被移除
      * @param path node path
      */
     public static void createPersistentNode(CuratorFramework zkClient, String path) {
@@ -61,7 +60,7 @@ public final class CuratorUtils {
     }
 
     /**
-     * Gets the children under a node
+     * 获取节点下的子节点
      *
      * @param rpcServiceName rpc service name eg:github.javaguide.HelloServicetest2version1
      * @return All child nodes under the specified node
@@ -126,7 +125,7 @@ public final class CuratorUtils {
     }
 
     /**
-     * Registers to listen for changes to the specified node
+     * 注册监听指定节点的变化
      *
      * @param rpcServiceName rpc service name eg:github.javaguide.HelloServicetest2version
      */
